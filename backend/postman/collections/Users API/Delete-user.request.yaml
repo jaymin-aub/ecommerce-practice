@@ -1,0 +1,19 @@
+$kind: http-request
+name: Delete user (Soft Delete)
+method: DELETE
+url: "{{base_url}}/api/users/:id"
+order: 4000
+pathVariables:
+  id: "{{user_id}}"
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      pm.test('User is soft-deleted successfully', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.data.id).to.eql(Number(pm.collectionVariables.get('user_id')));
+        pm.expect(res.data.isDeleted).to.be.true;
+        pm.expect(res.message).to.eql('User deleted successfully');
+      });

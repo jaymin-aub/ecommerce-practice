@@ -1,0 +1,18 @@
+$kind: http-request
+name: Delete product
+method: DELETE
+url: "{{base_url}}/api/products/:id"
+order: 6000
+pathVariables:
+  id: "{{product_id}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      pm.test('Product is deleted successfully', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.data.id).to.eql(Number(pm.collectionVariables.get('product_id')));
+        pm.expect(res.message).to.eql('Product deleted successfully');
+      });
+    language: text/javascript

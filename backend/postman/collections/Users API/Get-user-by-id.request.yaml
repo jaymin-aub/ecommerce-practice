@@ -1,0 +1,19 @@
+$kind: http-request
+name: Get user by :id
+method: GET
+url: "{{base_url}}/api/users/:id"
+order: 2000
+pathVariables:
+  id: "{{user_id}}"
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      pm.test('Returns the requested user', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.data.id).to.eql(Number(pm.collectionVariables.get('user_id')));
+        pm.expect(res.data.username).to.be.a('string');
+        pm.expect(res.data.email).to.be.a('string');
+      });

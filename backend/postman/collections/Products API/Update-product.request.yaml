@@ -1,0 +1,28 @@
+$kind: http-request
+name: Update product (PATCH)
+method: PATCH
+url: "{{base_url}}/api/products/:id"
+order: 5000
+pathVariables:
+  id: "{{product_id}}"
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "price": 549,
+      "stock": 10
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      pm.test('Only the sent fields change', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.data.price).to.eql(549);
+        pm.expect(res.data.stock).to.eql(10);
+        pm.expect(res.data.title).to.eql('Test Phone v2');
+      });
+    language: text/javascript

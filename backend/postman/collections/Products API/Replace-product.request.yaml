@@ -1,0 +1,37 @@
+$kind: http-request
+name: Replace product (PUT)
+method: PUT
+url: "{{base_url}}/api/products/:id"
+order: 4000
+pathVariables:
+  id: "{{product_id}}"
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": {{product_id}},
+      "title": "Test Phone v2", 
+      "description": "Fully replaced from the Postman collection",
+      "price": 599,
+      "discountPercentage": 7,
+      "rating": 4.5,
+      "stock": 20,
+      "brand": "Acme",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "images": ["https://i.dummyjson.com/data/products/1/1.jpg"]
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      pm.test('Product is overwritten and keeps its id', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.data.id).to.eql(Number(pm.collectionVariables.get('product_id')));
+        pm.expect(res.data.title).to.eql('Test Phone v2');
+        pm.expect(res.data.price).to.eql(599);
+      });
+    language: text/javascript

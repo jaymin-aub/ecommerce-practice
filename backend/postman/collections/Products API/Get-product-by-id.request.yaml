@@ -1,0 +1,19 @@
+$kind: http-request
+name: Get product by :id
+method: GET
+url: "{{base_url}}/api/products/:id"
+order: 3000
+pathVariables:
+  id: "{{product_id}}"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      pm.test('Returns the requested product', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.data.id).to.eql(Number(pm.collectionVariables.get('product_id')));
+        pm.expect(res.data.title).to.be.a('string');
+        pm.expect(res.data.images).to.be.an('array');
+      });
+    language: text/javascript

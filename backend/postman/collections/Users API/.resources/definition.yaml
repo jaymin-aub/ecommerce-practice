@@ -1,0 +1,17 @@
+$kind: collection
+name: Users API
+description: REST API for users (List, Get, Patch, Soft Delete), served by app.ts (Express).
+variables:
+  - key: base_url
+    value: 'http://localhost:3000'
+    description: Base URL of the local server (npm run dev)
+  - key: user_id
+    value: '1'
+    description: Id of the target user
+scripts:
+  - type: http:afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Responds in under 1000ms', () => {
+        pm.expect(pm.response.responseTime).to.be.below(1000);
+      });

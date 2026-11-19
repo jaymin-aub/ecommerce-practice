@@ -1,0 +1,14 @@
+$kind: collection
+name: Auth API
+description: Authentication endpoints for User Signup and Login (JWT token generation), served by app.ts (Express).
+variables:
+  - key: base_url
+    value: 'http://localhost:3000'
+    description: Base URL of the local server (npm run dev)
+scripts:
+  - type: http:afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Responds in under 1000ms', () => {
+        pm.expect(pm.response.responseTime).to.be.below(1000);
+      });

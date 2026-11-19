@@ -1,0 +1,1218 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhone 9",
+      "description": "An apple mobile which is nothing like apple",
+      "price": 549,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 94,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/1/1.jpg",
+        "https://i.dummyjson.com/data/products/1/2.jpg",
+        "https://i.dummyjson.com/data/products/1/3.jpg",
+        "https://i.dummyjson.com/data/products/1/4.jpg",
+        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "price": 899,
+      "discountPercentage": 17.94,
+      "rating": 4.44,
+      "stock": 34,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/2/2.jpg",
+        "https://i.dummyjson.com/data/products/2/3.jpg",
+        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249,
+      "discountPercentage": 15.46,
+      "rating": 4.09,
+      "stock": 36,
+      "brand": "Samsung",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/3/1.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "OPPOF19",
+      "description": "OPPO F19 is officially announced on April 2021.",
+      "price": 280,
+      "discountPercentage": 17.91,
+      "rating": 4.3,
+      "stock": 123,
+      "brand": "OPPO",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/4/1.jpg",
+        "https://i.dummyjson.com/data/products/4/2.jpg",
+        "https://i.dummyjson.com/data/products/4/3.jpg",
+        "https://i.dummyjson.com/data/products/4/4.jpg",
+        "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Huawei P30",
+      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      "price": 499,
+      "discountPercentage": 10.58,
+      "rating": 4.09,
+      "stock": 32,
+      "brand": "Huawei",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/5/1.jpg",
+        "https://i.dummyjson.com/data/products/5/2.jpg",
+        "https://i.dummyjson.com/data/products/5/3.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "MacBook Pro",
+      "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+      "price": 1749,
+      "discountPercentage": 11.02,
+      "rating": 4.57,
+      "stock": 83,
+      "brand": "Apple",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+      "images": [
+        "https://i.dummyjson.com/data/products/6/1.png",
+        "https://i.dummyjson.com/data/products/6/2.jpg",
+        "https://i.dummyjson.com/data/products/6/3.png",
+        "https://i.dummyjson.com/data/products/6/4.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Samsung Galaxy Book",
+      "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+      "price": 1499,
+      "discountPercentage": 4.15,
+      "rating": 4.25,
+      "stock": 50,
+      "brand": "Samsung",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/7/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/7/1.jpg",
+        "https://i.dummyjson.com/data/products/7/2.jpg",
+        "https://i.dummyjson.com/data/products/7/3.jpg",
+        "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Microsoft Surface Laptop 4",
+      "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+      "price": 1499,
+      "discountPercentage": 10.23,
+      "rating": 4.43,
+      "stock": 68,
+      "brand": "Microsoft Surface",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/8/1.jpg",
+        "https://i.dummyjson.com/data/products/8/2.jpg",
+        "https://i.dummyjson.com/data/products/8/3.jpg",
+        "https://i.dummyjson.com/data/products/8/4.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Infinix INBOOK",
+      "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+      "price": 1099,
+      "discountPercentage": 11.83,
+      "rating": 4.54,
+      "stock": 96,
+      "brand": "Infinix",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/9/1.jpg",
+        "https://i.dummyjson.com/data/products/9/2.png",
+        "https://i.dummyjson.com/data/products/9/3.png",
+        "https://i.dummyjson.com/data/products/9/4.jpg",
+        "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "HP Pavilion 15-DK1056WM",
+      "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+      "price": 1099,
+      "discountPercentage": 6.18,
+      "rating": 4.43,
+      "stock": 89,
+      "brand": "HP Pavilion",
+      "category": "laptops",
+      "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+      "images": [
+        "https://i.dummyjson.com/data/products/10/1.jpg",
+        "https://i.dummyjson.com/data/products/10/2.jpg",
+        "https://i.dummyjson.com/data/products/10/3.jpg",
+        "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "perfume Oil",
+      "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+      "price": 13,
+      "discountPercentage": 8.4,
+      "rating": 4.26,
+      "stock": 65,
+      "brand": "Impression of Acqua Di Gio",
+      "category": "fragrances",
+      "thumbnail": "https://i.dummyjson.com/data/products/11/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/11/1.jpg",
+        "https://i.dummyjson.com/data/products/11/2.jpg",
+        "https://i.dummyjson.com/data/products/11/3.jpg",
+        "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Brown Perfume",
+      "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+      "price": 40,
+      "discountPercentage": 15.66,
+      "rating": 4,
+      "stock": 52,
+      "brand": "Royal_Mirage",
+      "category": "fragrances",
+      "thumbnail": "https://i.dummyjson.com/data/products/12/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/12/1.jpg",
+        "https://i.dummyjson.com/data/products/12/2.jpg",
+        "https://i.dummyjson.com/data/products/12/3.png",
+        "https://i.dummyjson.com/data/products/12/4.jpg",
+        "https://i.dummyjson.com/data/products/12/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Fog Scent Xpressio Perfume",
+      "description": "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
+      "price": 13,
+      "discountPercentage": 8.14,
+      "rating": 4.59,
+      "stock": 61,
+      "brand": "Fog Scent Xpressio",
+      "category": "fragrances",
+      "thumbnail": "https://i.dummyjson.com/data/products/13/thumbnail.webp",
+      "images": [
+        "https://i.dummyjson.com/data/products/13/1.jpg",
+        "https://i.dummyjson.com/data/products/13/2.png",
+        "https://i.dummyjson.com/data/products/13/3.jpg",
+        "https://i.dummyjson.com/data/products/13/4.jpg",
+        "https://i.dummyjson.com/data/products/13/thumbnail.webp"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Non-Alcoholic Concentrated Perfume Oil",
+      "description": "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
+      "price": 120,
+      "discountPercentage": 15.6,
+      "rating": 4.21,
+      "stock": 114,
+      "brand": "Al Munakh",
+      "category": "fragrances",
+      "thumbnail": "https://i.dummyjson.com/data/products/14/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/14/1.jpg",
+        "https://i.dummyjson.com/data/products/14/2.jpg",
+        "https://i.dummyjson.com/data/products/14/3.jpg",
+        "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Eau De Perfume Spray",
+      "description": "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
+      "price": 30,
+      "discountPercentage": 10.99,
+      "rating": 4.7,
+      "stock": 105,
+      "brand": "Lord - Al-Rehab",
+      "category": "fragrances",
+      "thumbnail": "https://i.dummyjson.com/data/products/15/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/15/1.jpg",
+        "https://i.dummyjson.com/data/products/15/2.jpg",
+        "https://i.dummyjson.com/data/products/15/3.jpg",
+        "https://i.dummyjson.com/data/products/15/4.jpg",
+        "https://i.dummyjson.com/data/products/15/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Hyaluronic Acid Serum",
+      "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
+      "price": 19,
+      "discountPercentage": 13.31,
+      "rating": 4.83,
+      "stock": 110,
+      "brand": "L'Oreal Paris",
+      "category": "skincare",
+      "thumbnail": "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/16/1.png",
+        "https://i.dummyjson.com/data/products/16/2.webp",
+        "https://i.dummyjson.com/data/products/16/3.jpg",
+        "https://i.dummyjson.com/data/products/16/4.jpg",
+        "https://i.dummyjson.com/data/products/16/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Tree Oil 30ml",
+      "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
+      "price": 12,
+      "discountPercentage": 4.09,
+      "rating": 4.52,
+      "stock": 78,
+      "brand": "Hemani Tea",
+      "category": "skincare",
+      "thumbnail": "https://i.dummyjson.com/data/products/17/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/17/1.jpg",
+        "https://i.dummyjson.com/data/products/17/2.jpg",
+        "https://i.dummyjson.com/data/products/17/3.jpg",
+        "https://i.dummyjson.com/data/products/17/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Oil Free Moisturizer 100ml",
+      "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
+      "price": 40,
+      "discountPercentage": 13.1,
+      "rating": 4.56,
+      "stock": 88,
+      "brand": "Dermive",
+      "category": "skincare",
+      "thumbnail": "https://i.dummyjson.com/data/products/18/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/18/1.jpg",
+        "https://i.dummyjson.com/data/products/18/2.jpg",
+        "https://i.dummyjson.com/data/products/18/3.jpg",
+        "https://i.dummyjson.com/data/products/18/4.jpg",
+        "https://i.dummyjson.com/data/products/18/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Skin Beauty Serum.",
+      "description": "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
+      "price": 46,
+      "discountPercentage": 10.68,
+      "rating": 4.42,
+      "stock": 54,
+      "brand": "ROREC White Rice",
+      "category": "skincare",
+      "thumbnail": "https://i.dummyjson.com/data/products/19/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/19/1.jpg",
+        "https://i.dummyjson.com/data/products/19/2.jpg",
+        "https://i.dummyjson.com/data/products/19/3.png",
+        "https://i.dummyjson.com/data/products/19/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Freckle Treatment Cream- 15gm",
+      "description": "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
+      "price": 70,
+      "discountPercentage": 16.99,
+      "rating": 4.06,
+      "stock": 140,
+      "brand": "Fair & Clear",
+      "category": "skincare",
+      "thumbnail": "https://i.dummyjson.com/data/products/20/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/20/1.jpg",
+        "https://i.dummyjson.com/data/products/20/2.jpg",
+        "https://i.dummyjson.com/data/products/20/3.jpg",
+        "https://i.dummyjson.com/data/products/20/4.jpg",
+        "https://i.dummyjson.com/data/products/20/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 21,
+      "title": "- Daal Masoor 500 grams",
+      "description": "Fine quality Branded Product Keep in a cool and dry place",
+      "price": 20,
+      "discountPercentage": 4.81,
+      "rating": 4.44,
+      "stock": 133,
+      "brand": "Saaf & Khaas",
+      "category": "groceries",
+      "thumbnail": "https://i.dummyjson.com/data/products/21/thumbnail.png",
+      "images": [
+        "https://i.dummyjson.com/data/products/21/1.png",
+        "https://i.dummyjson.com/data/products/21/2.jpg",
+        "https://i.dummyjson.com/data/products/21/3.jpg"
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Elbow Macaroni - 400 gm",
+      "description": "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
+      "price": 14,
+      "discountPercentage": 15.58,
+      "rating": 4.57,
+      "stock": 146,
+      "brand": "Bake Parlor Big",
+      "category": "groceries",
+      "thumbnail": "https://i.dummyjson.com/data/products/22/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/22/1.jpg",
+        "https://i.dummyjson.com/data/products/22/2.jpg",
+        "https://i.dummyjson.com/data/products/22/3.jpg"
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Orange Essence Food Flavou",
+      "description": "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
+      "price": 14,
+      "discountPercentage": 8.04,
+      "rating": 4.85,
+      "stock": 26,
+      "brand": "Baking Food Items",
+      "category": "groceries",
+      "thumbnail": "https://i.dummyjson.com/data/products/23/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/23/1.jpg",
+        "https://i.dummyjson.com/data/products/23/2.jpg",
+        "https://i.dummyjson.com/data/products/23/3.jpg",
+        "https://i.dummyjson.com/data/products/23/4.jpg",
+        "https://i.dummyjson.com/data/products/23/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 24,
+      "title": "cereals muesli fruit nuts",
+      "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+      "price": 46,
+      "discountPercentage": 16.8,
+      "rating": 4.94,
+      "stock": 113,
+      "brand": "fauji",
+      "category": "groceries",
+      "thumbnail": "https://i.dummyjson.com/data/products/24/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/24/1.jpg",
+        "https://i.dummyjson.com/data/products/24/2.jpg",
+        "https://i.dummyjson.com/data/products/24/3.jpg",
+        "https://i.dummyjson.com/data/products/24/4.jpg",
+        "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Gulab Powder 50 Gram",
+      "description": "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
+      "price": 70,
+      "discountPercentage": 13.58,
+      "rating": 4.87,
+      "stock": 47,
+      "brand": "Dry Rose",
+      "category": "groceries",
+      "thumbnail": "https://i.dummyjson.com/data/products/25/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/25/1.png",
+        "https://i.dummyjson.com/data/products/25/2.jpg",
+        "https://i.dummyjson.com/data/products/25/3.png",
+        "https://i.dummyjson.com/data/products/25/4.jpg",
+        "https://i.dummyjson.com/data/products/25/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Plant Hanger For Home",
+      "description": "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
+      "price": 41,
+      "discountPercentage": 17.86,
+      "rating": 4.08,
+      "stock": 131,
+      "brand": "Boho Decor",
+      "category": "home-decoration",
+      "thumbnail": "https://i.dummyjson.com/data/products/26/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/26/1.jpg",
+        "https://i.dummyjson.com/data/products/26/2.jpg",
+        "https://i.dummyjson.com/data/products/26/3.jpg",
+        "https://i.dummyjson.com/data/products/26/4.jpg",
+        "https://i.dummyjson.com/data/products/26/5.jpg",
+        "https://i.dummyjson.com/data/products/26/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Flying Wooden Bird",
+      "description": "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
+      "price": 51,
+      "discountPercentage": 15.58,
+      "rating": 4.41,
+      "stock": 17,
+      "brand": "Flying Wooden",
+      "category": "home-decoration",
+      "thumbnail": "https://i.dummyjson.com/data/products/27/thumbnail.webp",
+      "images": [
+        "https://i.dummyjson.com/data/products/27/1.jpg",
+        "https://i.dummyjson.com/data/products/27/2.jpg",
+        "https://i.dummyjson.com/data/products/27/3.jpg",
+        "https://i.dummyjson.com/data/products/27/4.jpg",
+        "https://i.dummyjson.com/data/products/27/thumbnail.webp"
+      ]
+    },
+    {
+      "id": 28,
+      "title": "3D Embellishment Art Lamp",
+      "description": "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
+      "price": 20,
+      "discountPercentage": 16.49,
+      "rating": 4.82,
+      "stock": 54,
+      "brand": "LED Lights",
+      "category": "home-decoration",
+      "thumbnail": "https://i.dummyjson.com/data/products/28/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/28/1.jpg",
+        "https://i.dummyjson.com/data/products/28/2.jpg",
+        "https://i.dummyjson.com/data/products/28/3.png",
+        "https://i.dummyjson.com/data/products/28/4.jpg",
+        "https://i.dummyjson.com/data/products/28/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Handcraft Chinese style",
+      "description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
+      "price": 60,
+      "discountPercentage": 15.34,
+      "rating": 4.44,
+      "stock": 7,
+      "brand": "luxury palace",
+      "category": "home-decoration",
+      "thumbnail": "https://i.dummyjson.com/data/products/29/thumbnail.webp",
+      "images": [
+        "https://i.dummyjson.com/data/products/29/1.jpg",
+        "https://i.dummyjson.com/data/products/29/2.jpg",
+        "https://i.dummyjson.com/data/products/29/3.webp",
+        "https://i.dummyjson.com/data/products/29/4.webp",
+        "https://i.dummyjson.com/data/products/29/thumbnail.webp"
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Key Holder",
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+      "price": 30,
+      "discountPercentage": 2.92,
+      "rating": 4.92,
+      "stock": 54,
+      "brand": "Golden",
+      "category": "home-decoration",
+      "thumbnail": "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/30/1.jpg",
+        "https://i.dummyjson.com/data/products/30/2.jpg",
+        "https://i.dummyjson.com/data/products/30/3.jpg",
+        "https://i.dummyjson.com/data/products/30/thumbnail.jpg"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Terry",
+      "lastName": "Medhurst",
+      "age": 50,
+      "gender": "male",
+      "email": "atuny0@sohu.com",
+      "username": "atuny0",
+      "address": {
+        "address": "1745 T Street Southeast",
+        "city": "Washington",
+        "state": "DC",
+        "postalCode": "20020"
+      },
+      "company": {
+        "name": "Blanda-O'Keefe",
+        "department": "Marketing",
+        "title": "Help Desk Operator"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 2,
+      "firstName": "Sheldon",
+      "lastName": "Quigley",
+      "age": 28,
+      "gender": "male",
+      "email": "hbingley1@plala.or.jp",
+      "username": "hbingley1",
+      "address": {
+        "address": "6007 Applegate Lane",
+        "city": "Louisville",
+        "state": "KY",
+        "postalCode": "40219"
+      },
+      "company": {
+        "name": "Aufderhar-Cronin",
+        "department": "Services",
+        "title": "Senior Cost Accountant"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 3,
+      "firstName": "Terrill",
+      "lastName": "Hills",
+      "age": 38,
+      "gender": "male",
+      "email": "rshawe2@51.la",
+      "username": "rshawe2",
+      "address": {
+        "address": "560 Penstock Drive",
+        "city": "Grass Valley",
+        "state": "CA",
+        "postalCode": "95945"
+      },
+      "company": {
+        "name": "Lindgren LLC",
+        "department": "Marketing",
+        "title": "Mechanical Systems Engineer"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 4,
+      "firstName": "Miles",
+      "lastName": "Cummerata",
+      "age": 49,
+      "gender": "male",
+      "email": "yraigatt3@nature.com",
+      "username": "yraigatt3",
+      "address": {
+        "address": "150 Carter Street",
+        "city": "Manchester",
+        "state": "CT",
+        "postalCode": "06040"
+      },
+      "company": {
+        "name": "Wolff and Sons",
+        "department": "Business Development",
+        "title": "Paralegal"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 5,
+      "firstName": "Mavis",
+      "lastName": "Schultz",
+      "age": 38,
+      "gender": "male",
+      "email": "kmeus4@upenn.edu",
+      "username": "kmeus4",
+      "address": {
+        "address": "2721 Lindsay Avenue",
+        "city": "Louisville",
+        "state": "KY",
+        "postalCode": "40206"
+      },
+      "company": {
+        "name": "Adams Inc",
+        "department": "Support",
+        "title": "Web Developer I"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 6,
+      "firstName": "Alison",
+      "lastName": "Reichert",
+      "age": 21,
+      "gender": "female",
+      "email": "jtreleven5@nhs.uk",
+      "username": "jtreleven5",
+      "address": {
+        "address": "18 Densmore Drive",
+        "city": "Essex",
+        "state": "VT",
+        "postalCode": "05452"
+      },
+      "company": {
+        "name": "D'Amore and Sons",
+        "department": "Accounting",
+        "title": "Civil Engineer"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 7,
+      "firstName": "Oleta",
+      "lastName": "Abbott",
+      "age": 31,
+      "gender": "female",
+      "email": "dpettegre6@columbia.edu",
+      "username": "dpettegre6",
+      "address": {
+        "address": "637 Britannia Drive",
+        "city": "Vallejo",
+        "state": "CA",
+        "postalCode": "94591"
+      },
+      "company": {
+        "name": "Schimmel, Wilderman and Orn",
+        "department": "Product Management",
+        "title": "Sales Associate"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 8,
+      "firstName": "Ewell",
+      "lastName": "Mueller",
+      "age": 29,
+      "gender": "male",
+      "email": "ggude7@chron.com",
+      "username": "ggude7",
+      "address": {
+        "address": "5601 West Crocus Drive",
+        "city": "Glendale",
+        "state": "AZ",
+        "postalCode": "85306"
+      },
+      "company": {
+        "name": "Corkery, Reichert and Hodkiewicz",
+        "department": "Services",
+        "title": "Clinical Specialist"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 9,
+      "firstName": "Demetrius",
+      "lastName": "Corkery",
+      "age": 22,
+      "gender": "male",
+      "email": "nloiterton8@aol.com",
+      "username": "nloiterton8",
+      "address": {
+        "address": "5403 Illinois Avenue",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "37209"
+      },
+      "company": {
+        "name": "Gorczany Group",
+        "department": "Human Resources",
+        "title": "Community Outreach Specialist"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 10,
+      "firstName": "Eleanora",
+      "lastName": "Price",
+      "age": 37,
+      "gender": "female",
+      "email": "umcgourty9@jalbum.net",
+      "username": "umcgourty9",
+      "address": {
+        "address": "8821 West Myrtle Avenue",
+        "city": "Glendale",
+        "state": "AZ",
+        "postalCode": "85305"
+      },
+      "company": {
+        "name": "Bins Group",
+        "department": "Marketing",
+        "title": "Senior Sales Associate"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 11,
+      "firstName": "Marcel",
+      "lastName": "Jones",
+      "age": 39,
+      "gender": "male",
+      "email": "acharlota@liveinternet.ru",
+      "username": "acharlota",
+      "address": {
+        "address": "2203 7th Street Road",
+        "city": "Louisville",
+        "state": "KY",
+        "postalCode": "40208"
+      },
+      "company": {
+        "name": "Kuhn-Harber",
+        "department": "Business Development",
+        "title": "Account Executive"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 12,
+      "firstName": "Assunta",
+      "lastName": "Rath",
+      "age": 42,
+      "gender": "female",
+      "email": "rhallawellb@dropbox.com",
+      "username": "rhallawellb",
+      "address": {
+        "address": "6463 Vrain Street",
+        "city": "Arvada",
+        "state": "CO",
+        "postalCode": "80003"
+      },
+      "company": {
+        "name": "Goodwin-Skiles",
+        "department": "Product Management",
+        "title": "Developer II"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 13,
+      "firstName": "Trace",
+      "lastName": "Douglas",
+      "age": 26,
+      "gender": "male",
+      "email": "lgribbinc@posterous.com",
+      "username": "lgribbinc",
+      "address": {
+        "address": "87 Horseshoe Drive",
+        "city": "West Windsor",
+        "state": "VT",
+        "postalCode": "05037"
+      },
+      "company": {
+        "name": "Casper Inc",
+        "department": "Research and Development",
+        "title": "Sales Associate"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 14,
+      "firstName": "Enoch",
+      "lastName": "Lynch",
+      "age": 21,
+      "gender": "male",
+      "email": "mturleyd@tumblr.com",
+      "username": "mturleyd",
+      "address": {
+        "address": "60 Desousa Drive",
+        "city": "Manchester",
+        "state": "CT",
+        "postalCode": "06040"
+      },
+      "company": {
+        "name": "Schoen Inc",
+        "department": "Sales",
+        "title": "Professor"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 15,
+      "firstName": "Jeanne",
+      "lastName": "Halvorson",
+      "age": 26,
+      "gender": "female",
+      "email": "kminchelle@qq.com",
+      "username": "kminchelle",
+      "address": {
+        "address": "4 Old Colony Way",
+        "city": "Yarmouth",
+        "state": "MA",
+        "postalCode": "02664"
+      },
+      "company": {
+        "name": "Hahn-MacGyver",
+        "department": "Marketing",
+        "title": "Software Test Engineer IV"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 16,
+      "firstName": "Trycia",
+      "lastName": "Fadel",
+      "age": 41,
+      "gender": "female",
+      "email": "dpierrof@vimeo.com",
+      "username": "dpierrof",
+      "address": {
+        "address": "314 South 17th Street",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "37206"
+      },
+      "company": {
+        "name": "Steuber, Considine and Padberg",
+        "department": "Research and Development",
+        "title": "Geological Engineer"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 17,
+      "firstName": "Bradford",
+      "lastName": "Prohaska",
+      "age": 43,
+      "gender": "male",
+      "email": "vcholdcroftg@ucoz.com",
+      "username": "vcholdcroftg",
+      "address": {
+        "address": "1649 Timberridge Court",
+        "city": "Fayetteville",
+        "state": "AR",
+        "postalCode": "72704"
+      },
+      "company": {
+        "name": "Bogisich and Sons",
+        "department": "Sales",
+        "title": "Operator"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 18,
+      "firstName": "Arely",
+      "lastName": "Skiles",
+      "age": 42,
+      "gender": "male",
+      "email": "sberminghamh@chron.com",
+      "username": "sberminghamh",
+      "address": {
+        "address": "5461 West Shades Valley Drive",
+        "city": "Montgomery",
+        "state": "AL",
+        "postalCode": "36108"
+      },
+      "company": {
+        "name": "Metz Group",
+        "department": "Support",
+        "title": "VP Accounting"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 19,
+      "firstName": "Gust",
+      "lastName": "Purdy",
+      "age": 46,
+      "gender": "male",
+      "email": "bleveragei@so-net.ne.jp",
+      "username": "bleveragei",
+      "address": {
+        "address": "629 Debbie Drive",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "37076"
+      },
+      "company": {
+        "name": "Bahringer, Auer and Wehner",
+        "department": "Sales",
+        "title": "Financial Analyst"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 20,
+      "firstName": "Lenna",
+      "lastName": "Renner",
+      "age": 41,
+      "gender": "female",
+      "email": "aeatockj@psu.edu",
+      "username": "aeatockj",
+      "address": {
+        "address": "22572 Toreador Drive",
+        "city": "Salinas",
+        "state": "CA",
+        "postalCode": "93908"
+      },
+      "company": {
+        "name": "Hoppe Group",
+        "department": "Support",
+        "title": "Geologist III"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 21,
+      "firstName": "Doyle",
+      "lastName": "Ernser",
+      "age": 23,
+      "gender": "male",
+      "email": "ckensleyk@pen.io",
+      "username": "ckensleyk",
+      "address": {
+        "address": "3034 Mica Street",
+        "city": "Fayetteville",
+        "state": "AR",
+        "postalCode": "72704"
+      },
+      "company": {
+        "name": "Brekke Group",
+        "department": "Product Management",
+        "title": "Programmer Analyst I"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 22,
+      "firstName": "Tressa",
+      "lastName": "Weber",
+      "age": 41,
+      "gender": "female",
+      "email": "froachel@howstuffworks.com",
+      "username": "froachel",
+      "address": {
+        "address": "3729 East Mission Boulevard",
+        "city": "Fayetteville",
+        "state": "AR",
+        "postalCode": "72703"
+      },
+      "company": {
+        "name": "Durgan Group",
+        "department": "Research and Development",
+        "title": "VP Quality Control"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 23,
+      "firstName": "Felicity",
+      "lastName": "O'Reilly",
+      "age": 46,
+      "gender": "female",
+      "email": "beykelhofm@wikispaces.com",
+      "username": "beykelhofm",
+      "address": {
+        "address": "5114 Greentree Drive",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "37211"
+      },
+      "company": {
+        "name": "Romaguera, Williamson and Kessler",
+        "department": "Legal",
+        "title": "Assistant Manager"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 24,
+      "firstName": "Jocelyn",
+      "lastName": "Schuster",
+      "age": 19,
+      "gender": "male",
+      "email": "brickeardn@fema.gov",
+      "username": "brickeardn",
+      "address": {
+        "address": "3466 Southview Avenue",
+        "city": "Montgomery",
+        "state": "AL",
+        "postalCode": "36111"
+      },
+      "company": {
+        "name": "Wintheiser-Boehm",
+        "department": "Product Management",
+        "title": "Research Nurse"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 25,
+      "firstName": "Edwina",
+      "lastName": "Ernser",
+      "age": 21,
+      "gender": "female",
+      "email": "dfundello@amazon.co.jp",
+      "username": "dfundello",
+      "address": {
+        "address": "1513 Cathy Street",
+        "city": "Savannah",
+        "state": "GA",
+        "postalCode": "31415"
+      },
+      "company": {
+        "name": "Volkman Group",
+        "department": "Marketing",
+        "title": "Cost Accountant"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 26,
+      "firstName": "Griffin",
+      "lastName": "Braun",
+      "age": 35,
+      "gender": "male",
+      "email": "lgronaverp@cornell.edu",
+      "username": "lgronaverp",
+      "address": {
+        "address": "600 West 19th Avenue",
+        "city": "Anchorage",
+        "state": "AK",
+        "postalCode": "99503"
+      },
+      "company": {
+        "name": "Boyle, Boyer and Lang",
+        "department": "Engineering",
+        "title": "Senior Cost Accountant"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 27,
+      "firstName": "Piper",
+      "lastName": "Schowalter",
+      "age": 47,
+      "gender": "female",
+      "email": "fokillq@amazon.co.jp",
+      "username": "fokillq",
+      "address": {
+        "address": "1208 Elkader Court North",
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": "37013"
+      },
+      "company": {
+        "name": "O'Hara and Sons",
+        "department": "Human Resources",
+        "title": "Sales Representative"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 28,
+      "firstName": "Kody",
+      "lastName": "Terry",
+      "age": 28,
+      "gender": "male",
+      "email": "xisherwoodr@ask.com",
+      "username": "xisherwoodr",
+      "address": {
+        "address": "210 Green Road",
+        "city": "Manchester",
+        "state": "CT",
+        "postalCode": "06042"
+      },
+      "company": {
+        "name": "Leffler, Beatty and Kilback",
+        "department": "Support",
+        "title": "Recruiting Manager"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 29,
+      "firstName": "Macy",
+      "lastName": "Greenfelder",
+      "age": 45,
+      "gender": "female",
+      "email": "jissetts@hostgator.com",
+      "username": "jissetts",
+      "address": {
+        "address": "49548 Road 200",
+        "city": "O'Neals",
+        "state": "CA",
+        "postalCode": "93645"
+      },
+      "company": {
+        "name": "Bruen and Sons",
+        "department": "Product Management",
+        "title": "Structural Analysis Engineer"
+      },
+      "password": "password123",
+      "token": ""
+    },
+    {
+      "id": 30,
+      "firstName": "Maurine",
+      "lastName": "Stracke",
+      "age": 31,
+      "gender": "female",
+      "email": "kdulyt@umich.edu",
+      "username": "kdulyt",
+      "address": {
+        "address": "81 Seaton Place Northwest",
+        "city": "Washington",
+        "state": "DC",
+        "postalCode": "20001"
+      },
+      "company": {
+        "name": "Balistreri-Kshlerin",
+        "department": "Support",
+        "title": "Quality Engineer"
+      },
+      "password": "password123",
+      "token": ""
+    }
+  ]
+}

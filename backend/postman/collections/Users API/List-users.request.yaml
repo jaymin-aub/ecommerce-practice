@@ -1,0 +1,22 @@
+$kind: http-request
+name: List users
+method: GET
+url: "{{base_url}}/api/users?page=1&limit=10"
+queryParams:
+  page: "1"
+  limit: "10"
+order: 1000
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      pm.test('Body is formatted with success, pagination, and data array', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.pagination).to.have.all.keys('total', 'page', 'limit', 'totalPages');
+        pm.expect(res.data).to.be.an('array').that.is.not.empty;
+        pm.expect(res.data[0]).to.include.all.keys(
+          'id', 'firstName', 'lastName', 'age', 'gender', 'email', 'username'
+        );
+      });
+    language: text/javascript

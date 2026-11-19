@@ -1,0 +1,34 @@
+$kind: http-request
+name: Create product
+method: POST
+url: "{{base_url}}/api/products"
+order: 2000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": {{product_id}},
+      "title": "Test Phone 31",
+      "description": "A product created from the Postman collection",
+      "price": 499,
+      "discountPercentage": 5.5,
+      "rating": 4.2,
+      "stock": 25,
+      "brand": "Acme",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+      "images": ["https://i.dummyjson.com/data/products/1/1.jpg"]
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status is 201', () => pm.response.to.have.status(201));
+      pm.test('Response includes the created product', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.data.id).to.eql(Number(pm.collectionVariables.get('product_id')));
+        pm.expect(res.data.title).to.eql('Test Phone 31');
+      });
+    language: text/javascript

@@ -1,0 +1,28 @@
+$kind: http-request
+name: Update user (PATCH)
+method: PATCH
+url: "{{base_url}}/api/users/:id"
+order: 3000
+pathVariables:
+  id: "{{user_id}}"
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "age": 42,
+      "email": "updated.user@example.com"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      pm.test('Only the sent fields change', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.data.age).to.eql(42);
+        pm.expect(res.data.email).to.eql('updated.user@example.com');
+      });

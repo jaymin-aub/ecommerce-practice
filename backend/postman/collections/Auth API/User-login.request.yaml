@@ -1,0 +1,27 @@
+$kind: http-request
+name: Login
+method: POST
+url: "{{base_url}}/api/auth/login"
+order: 2000
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "email": "atuny0@sohu.com",
+      "password": "password123"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      pm.test('Login returns success and auth token', () => {
+        const res = pm.response.json();
+        pm.expect(res.success).to.be.true;
+        pm.expect(res.message).to.eql('Login Successful');
+        pm.expect(res.token).to.be.a('string').that.is.not.empty;
+        pm.expect(res.data).to.have.property('id');
+        pm.environment.set('auth_token', res.token);
+      });
