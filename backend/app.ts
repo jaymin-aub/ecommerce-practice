@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 
 process.loadEnvFile();
 const app = express();
@@ -9,6 +10,17 @@ import { userRouter } from "./src/routes/user.routes.ts";
 import connectDB from "./src/config/database.ts";
 import { errorHandler } from "./src/middlewares/errorHandler.middleware.ts";
 import { NotFoundError } from "./src/utils/errors.ts";
+
+const allowedOrigins = process.env.CLIENT_ORIGIN
+  ? process.env.CLIENT_ORIGIN.split(",").map((origin) => origin.trim())
+  : ["http://localhost:4200", "http://127.0.0.1:4200"];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  }),
+);
 
 app.use(express.json());
 app.use("/api/auth", authRouter);
