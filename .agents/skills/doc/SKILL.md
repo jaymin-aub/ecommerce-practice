@@ -2,14 +2,14 @@
 name: doc
 description: >-
   Audits the current codebase state, git commits, and file modifications against all
-  project documentation (PROGRESS.md, LOGS.md, MILESTONES.md, GAPS.md) and updates them
+  project documentation (PROGRESS.md, LOGS.md, MILESTONES.md) and updates them
   accurately and quickly. Use whenever the user executes /doc or asks to synchronize
   documentation with code.
 ---
 
 # Documentation Sync Skill (`/doc`)
 
-This skill synchronizes all documentation in `docs/` and `docs/workflow/` with the actual state of the codebase. It ensures tracking documents never drift from reality.
+This skill synchronizes all documentation in `docs/workflow/` with the actual state of the codebase. It ensures tracking documents never drift from reality.
 
 ---
 
@@ -42,13 +42,8 @@ Whenever `/doc` is invoked, execute these steps sequentially:
 2. Check off items that have been verified on disk.
 3. If all items in a milestone are completed, mark the milestone as completed.
 
-### Step 5: Update `docs/GAPS.md`
-1. Check if recent work implemented or practiced any topics listed in `docs/GAPS.md` (e.g. Reactive Forms, Vitest, Mocking, Signals).
-2. Check off covered topics and add an entry to the **Learning Log & Practice Check-Ins** table with date, file reference, and key takeaway.
-
-### Step 6: Present Brief Summary to Developer
+### Step 5: Present Brief Summary to Developer
 Output a concise summary highlighting:
 - Tasks marked completed in `PROGRESS.md`.
 - Decisions logged in `LOGS.md`.
-- GAPS practiced or verified in `GAPS.md`.
 - Clickable markdown links to all modified docs.

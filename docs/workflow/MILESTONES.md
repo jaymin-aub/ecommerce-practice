@@ -1,113 +1,105 @@
-# Project Milestones
+# Project Milestones (Flow-Driven Roadmap)
 
-High-level roadmap outlining the major phases of the project. Each milestone defines the target objective, key questions, and challenges that will be expanded into detailed execution checklists in [PROGRESS.md](./PROGRESS.md).
-
----
-
-## Template Format for Milestones
-
-```markdown
-### Milestone [X]: [Milestone Title]
-
-- **Description:** 
-  [3-4 line summary of what this milestone covers, its primary objective, and how it moves the product forward.]
-- **Key Questions:**
-  - [Open architectural or design question #1]
-  - [Open question #2]
-- **Core Challenges:**
-  - [Technical hurdle, concurrency risk, or integration challenge]
-- **Definition of Done:**
-  - [ ] [Measurable outcome #1]
-  - [ ] [Measurable outcome #2]
-- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-x)
-```
+High-level roadmap structured into **vertical feature flows**. Each milestone delivers a complete, testable user story end-to-end (Contracts $\rightarrow$ API $\rightarrow$ Frontend UI $\rightarrow$ Verification), ensuring no black-box code or disconnected layers.
 
 ---
 
-## Active & Upcoming Milestones
+## Milestone 1: Spec Foundation, API Contracts & Shared DTOs
 
-### Milestone 1: Baseline Setup & Shared Contracts
 - **Description:** 
-  Establish a clean working baseline across the repository. Verify database connectivity and seeder scripts, resolve immediate backend blockers (CORS and middleware), and establish unified domain contracts in `shared/` as the single source of truth for both frontend and backend.
+  Establish the architectural and contract baseline for all feature flows. Finalize the 17-endpoint REST API inventory, fix the public route access blocker in product routes, draft single-source-of-truth TypeScript DTOs in `shared/`, and configure `@shared/*` path aliases across backend and frontend.
 - **Key Questions:**
-  - How should path aliases be structured across backend and frontend to consume `shared/` cleanly?
-  - What exact payload structures should standard API responses follow?
+  - What exact fields must be exposed vs. stripped in public product and auth responses?
+  - How will path aliases (`@shared/*`) resolve in both Node.js (ESM) and Angular (Vite/esbuild)?
 - **Core Challenges:**
-  - Ensuring strict typing with zero `any` across frontend and backend boundaries.
+  - Guaranteeing zero `any` and strict type safety across network boundaries.
 - **Definition of Done:**
-  - [x] Clean initial git commit established.
-  - [x] MongoDB connected and seeded successfully.
-  - [ ] Shared contracts and DTOs established and compiling cleanly.
-- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-1-baseline-setup--shared-contracts)
+  - [x] Initial git baseline committed and pushed to `main`.
+  - [x] MongoDB verified and seeded with initial products and users.
+  - [x] CORS middleware configured for `localhost:4200`.
+  - [x] Public access unblocked for catalog routes (`GET /api/products`).
+  - [x] Shared domain types and request/response DTOs defined in `shared/src/types/`.
+  - [x] `@shared/*` path aliases configured and compiling cleanly in both `backend` and `frontend`.
+- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-1-spec-foundation-api-contracts--shared-dtos)
 
 ---
 
-### Milestone 2: Backend Architecture & Cart Core
+## Milestone 2: Flow 1 — Public Catalog Browsing & Real-Time Stock
+
+- **User Story:** 
+  Any visitor (guest or authenticated) can browse the catalog, view paginated products, inspect live stock levels with color-coded status badges ("In Stock", "Only X left!", "Out of Stock"), and search/filter without logging in.
 - **Description:** 
-  Refactor backend controllers to enforce 4-layer separation (Routes -> Controllers -> Services -> Models). Implement Cart data modeling and atomic inventory management to ensure stock is accurately tracked and protected against race conditions.
+  Deliver the complete end-to-end product browsing slice. Wire the public paginated product API to a modern Angular shell using standalone components, Angular Signals for reactive state, and Tailwind CSS v4 for clean badge states.
 - **Key Questions:**
-  - Should cart items be an embedded subdocument array on User or a standalone Cart collection?
-  - At what stage should stock be reserved vs. released?
+  - How should pagination state and search queries be managed reactively using Signals?
+  - What threshold determines "low stock" warning badges (e.g., $\le 3$ items)?
 - **Core Challenges:**
-  - Guaranteeing atomic inventory operations using MongoDB `$inc` and conditional guards.
+  - Preventing change detection loops or function re-execution in template bindings; strictly using `computed()` signals.
 - **Definition of Done:**
-  - [ ] Service layer cleanly decoupled from Express controllers.
-  - [ ] Cart endpoints fully functional and tested.
-- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-2-backend-architecture--cart-core)
+  - [ ] Public `GET /api/products` verified with pagination metadata and `.lean()` queries.
+  - [ ] Standalone `ProductCardComponent` using `input.required<Product>()` and modern `@if` / `@for` with unique `track`.
+  - [ ] Catalog grid with responsive layout, dynamic stock badges, and empty fallback state (`@empty`).
+  - [ ] Unit tests for `ProductService` and `ProductCardComponent` passing in Vitest.
+- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-2-flow-1--public-catalog-browsing--real-time-stock)
 
 ---
 
-### Milestone 3: Frontend Foundations & Shell
+## Milestone 3: Flow 2 — Authentication, Session Restore & Guest Interception
+
+- **User Story:** 
+  Users can register and log in via clean forms with validation feedback. When a logged-in user refreshes their browser, their session persists seamlessly. If a guest clicks "Add to Cart", they are intercepted with a friendly login/register prompt that restores their browsing position after authentication.
 - **Description:** 
-  Build out the Angular application shell using standalone components, Angular Signals, and Tailwind CSS. Set up HTTP interceptors for JWT management, global error handling, and reactive layout components including the top navigation bar with a live cart badge.
+  Deliver the authentication and session management slice. Implement the `GET /api/auth/me` endpoint, build Angular Reactive Forms using `NonNullableFormBuilder`, set up functional HTTP interceptors for JWT injection, and manage user state via readonly signals.
 - **Key Questions:**
-  - How will auth and cart state persist across page reloads?
-  - What is the reactive data flow between signals and UI triggers?
+  - How to smoothly store tokens (LocalStorage vs. HTTP-only cookies) and restore state on browser reload?
+  - How to intercept guest actions without losing the user's intent?
 - **Core Challenges:**
-  - Enforcing pure Signals architecture with zero memory leaks and modern control flow.
+  - Proper form validation timing (displaying errors only when controls are `touched` or `dirty`) without template clutter.
 - **Definition of Done:**
-  - [ ] Core layout, navigation bar, and responsive shell operational.
-  - [ ] Interceptors and root signal services wired up.
-- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-3-frontend-foundations--shell)
+  - [ ] `GET /api/auth/me` implemented to validate JWT and restore active user session.
+  - [ ] Reactive register and login forms with real-time validation and error handling.
+  - [ ] Functional `HttpInterceptorFn` attaching bearer tokens to outgoing API requests.
+  - [ ] `AuthService` exposing readonly state signals (`currentUser`, `isLoggedIn`).
+  - [ ] Guest interception prompt triggered when unauthenticated users attempt restricted actions.
+- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-3-flow-2--authentication-session-restore--guest-interception)
 
 ---
 
-### Milestone 4: Product Catalog & Real-Time Stock
+## Milestone 4: Flow 3 & 4 — Shopping Cart & Atomic Inventory Sync
+
+- **User Story:** 
+  A logged-in user clicks "Add to Cart" on a product card: the visible stock decrements immediately on the card, the cart badge updates, and the item enters their cart. In the cart drawer, the user can adjust quantities (`+`/`-`) or remove items, which automatically restores stock to the catalog.
 - **Description:** 
-  Implement the product browsing experience with clean grid layouts, pagination, and real-time inventory indicators. Ensure the catalog accurately reflects remaining quantities, dynamically toggling stock badge colors and disabling actions when items deplete.
+  Deliver the core e-commerce transaction and cart management flow. Implement atomic MongoDB inventory mutation using `$inc` with condition guards (`{ stock: { $gt: 0 } }`) to eliminate race conditions, paired with an interactive slide-out cart panel in Angular.
 - **Key Questions:**
-  - How should pagination and filtering be reflected reactively in UI state?
+  - How will stock restoration be handled if a user abandons their cart vs. explicitly removes an item?
+  - How should cart state synchronize reactively across the navbar badge, catalog cards, and drawer?
 - **Core Challenges:**
-  - Synchronizing catalog stock levels immediately when items are added to the cart.
+  - Guaranteeing atomicity: stock must NEVER drop below zero under concurrent requests.
 - **Definition of Done:**
-  - [ ] Product grid with proper responsive cards and status badges.
-  - [ ] "Add to Cart" triggers stock decrease without full-page reloads.
-- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-4-product-catalog--real-time-stock)
+  - [ ] Cart data model and atomic service operations implemented on backend (`$inc: -1` and `$inc: +1`).
+  - [ ] Cart endpoints operational: `GET /api/cart`, `POST /api/cart/items`, `PATCH /api/cart/items/:id`, `DELETE /api/cart/items/:id`.
+  - [ ] Slide-out cart drawer component with quantity controls, line-item subtotals, and grand total summary.
+  - [ ] Live cart badge in top navigation reacting instantly to additions and deletions via Signals.
+  - [ ] Product card stock count decrements immediately upon cart addition; disables button when stock hits 0.
+- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-4-flow-3--4--shopping-cart--atomic-inventory-sync)
 
 ---
 
-### Milestone 5: Authentication & Session Management
-- **Description:** 
-  Implement secure user registration and login flows using Reactive Forms with strict validation. Integrate token-based authentication with smooth redirect handling, prompting guest users to log in when attempting restricted actions like adding to cart.
-- **Key Questions:**
-  - How to smoothly return the user to their exact cart action after authenticating?
-- **Core Challenges:**
-  - Proper form validation UX and secure token storage without exposing credentials.
-- **Definition of Done:**
-  - [ ] Register and Login forms fully operational.
-  - [ ] Guest interception flow working seamlessly.
-- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-5-authentication--session-management)
+## Milestone 5: Flow 5 — Adversarial Testing, Performance & Production Polish
 
----
-
-### Milestone 6: Cart Panel & Full Checkout Experience
+- **User Story:** 
+  The store operates reliably under edge cases: simultaneous purchases of the last item fail gracefully, network disconnects trigger informative toast notifications, and the web app loads with fast time-to-interactive.
 - **Description:** 
-  Build the interactive shopping cart panel/page allowing users to adjust quantities, remove items, and view price calculations. Complete the cycle by testing concurrent operations and end-to-end edge cases.
+  Audit, stress-test, and harden the full application. Perform concurrency testing on inventory depletion, implement `@defer` loading and OnPush change detection, optimize bundle assets, and conduct a final code cleanliness review.
 - **Key Questions:**
-  - What confirmation or feedback is required for destructive actions like cart removal?
+  - What happens when two users click "Add to Cart" on the final available item at the exact same millisecond?
+  - What performance gains are achieved by deferring off-screen components?
 - **Core Challenges:**
-  - Accurate stock restoration when items are decremented or removed.
+  - Writing reproducible adversarial concurrency tests verifying HTTP 400 response on stock exhaustion.
 - **Definition of Done:**
-  - [ ] Cart drawer/page with live subtotal and quantity controls.
-  - [ ] Adversarial testing for race conditions and edge cases passing cleanly.
-- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-6-cart-panel--full-checkout-experience)
+  - [ ] Concurrency test suite proving negative stock is mathematically impossible.
+  - [ ] Angular views optimized with `@defer` and OnPush strategy.
+  - [ ] Centralized toast notifications for all user actions (added to cart, login success, stock depleted).
+  - [ ] Zero TypeScript errors (`npm run typecheck`) and zero linter warnings across entire workspace.
+- **Detailed Plan:** See [PROGRESS.md](./PROGRESS.md#milestone-5-flow-5--adversarial-testing-performance--production-polish)

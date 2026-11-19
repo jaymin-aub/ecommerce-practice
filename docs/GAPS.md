@@ -1,15 +1,16 @@
 # GAPS.md - Engineering Learning Ledger & Deliberate Practice
 
-This document tracks technical areas and concepts that are actively being learned and explored. 
+This document tracks technical areas and concepts that are actively being learned and explored.
 
 ---
 
 ## 1. Operating Mindset & Core Rule for AI Agents
 
-> **Engineer Persona:**  
+> **Engineer Persona:**
 > The developer is operating as a **junior-to-mid software engineer** who intentionally wants to build deep mastery, understand the mechanics of every single layer, and **own up to every decision** made in this repository.
 
 ### Mandatory Directive for All AI Agents (Helper, Worker):
+
 - **Never auto-generate black-box solutions** for items listed in this document.
 - **Always ask and consult the developer** whenever a task touches any topic listed below before choosing or writing code:
   - Ask: *"This feature touches [Topic from GAPS.md]. Would you like to implement this using [Approach A] or [Approach B], and shall we walk through how it works?"*
@@ -21,6 +22,7 @@ This document tracks technical areas and concepts that are actively being learne
 ## 2. Angular Knowledge Gaps
 
 ### 6. Forms
+
 - [ ] **Template-Driven Forms:** Two-way binding, ngForm, ngModel, form directives, appropriate use cases.
 - [ ] **Reactive Forms:** Structure, explicit controls, non-nullable builders.
 - [ ] **FormControl, FormGroup, FormArray:** Granular control composition and dynamic list handling.
@@ -39,6 +41,7 @@ This document tracks technical areas and concepts that are actively being learne
 ---
 
 ### 11. Testing (Angular)
+
 - [ ] **Unit Testing Components:** Isolated component testing without DOM, testing component methods and signals.
 - [ ] **Testing Services:** Mocking HTTP calls, testing state mutations in Signals.
 - [ ] **Testing Pipes & Directives:** Pure function verification and DOM behavior testing.
@@ -52,6 +55,7 @@ This document tracks technical areas and concepts that are actively being learne
 ---
 
 ### 12. Angular Performance & Optimization
+
 - [ ] **Lazy Loading:** Route-level `loadComponent` and `loadChildren`.
 - [ ] **OnPush Change Detection:** Understanding zoneless change detection and OnPush semantics.
 - [ ] **Signals for Reactive State:** Fine-grained reactivity, computed signals without side effects, untracked reads.
@@ -69,7 +73,25 @@ This document tracks technical areas and concepts that are actively being learne
 
 ## 3. Node.js & Backend Knowledge Gaps
 
+
+
+### 13. Real-Time Communication (WebSockets & Socket.IO)
+
+- [ ] **What are WebSockets:** Protocol fundamentals, TCP socket handshake, full-duplex bidirectional communication vs request-response.
+- [ ] **HTTP vs WebSockets:** Long polling vs Server-Sent Events (SSE) vs WebSockets trade-offs and overhead.
+- [ ] **Socket.IO:** Architecture, fallback transports, engine.io, event-based model.
+- [ ] **WebSocket Connections:** Managing client-server connection lifecycle, connection state, heartbeat/ping-pong.
+- [ ] **Real-Time Messaging:** Event emitters, sending and receiving typed JSON payloads.
+- [ ] **Broadcasting:** Emitting events to all connected clients except sender (`socket.broadcast.emit`).
+- [ ] **Rooms:** Channel grouping (e.g. `product-room-{id}` or `user-cart-{userId}`) for targeted event delivery.
+- [ ] **Namespaces:** Multiplexing separate socket channels over a single TCP connection.
+- [ ] **Handling Disconnected Clients:** Connection drops, exponential backoff reconnection, offline state synchronization.
+- [ ] **Real-Time Notifications:** Live inventory stock updates pushed to all active browsing clients when items deplete.
+
+---
+
 ### 14. Testing (Backend)
+
 - [ ] **Unit Testing:** Isolated testing of pure utility functions and business services.
 - [ ] **Integration Testing:** Testing Route $\rightarrow$ Controller $\rightarrow$ Service $\rightarrow$ Database flow together.
 - [ ] **API Testing:** End-to-end HTTP request testing using Supertest.
@@ -82,10 +104,3 @@ This document tracks technical areas and concepts that are actively being learne
 - [ ] **Database Testing:** In-memory MongoDB testing (`mongodb-memory-server`) or isolated test databases, verifying atomic operations.
 - [ ] **Test Coverage:** Generating and interpreting coverage reports (lines, branches, functions).
 
----
-
-## 4. Learning Log & Practice Check-Ins
-
-| Date | Topic Practiced | Files / Implementation Reference | Notes & Key Takeaways |
-| :--- | :--- | :--- | :--- |
-| 2026-11-19 | Backend Service Layer & Postman API Testing | `backend/src/services/product.service.ts`, `backend/src/controllers/product.controller.ts`, `backend/src/utils/pagination.ts` | Decoupled Mongoose database operations into `ProductService`; created reusable pagination utility (`parsePagination`, `buildPaginationMeta`); applied DRY helper `getProductId` and single-pass `PaginationParams` across controller and service; verified all 6 CRUD operations and auth via Postman CLI (18/18 assertions passed). |

@@ -64,11 +64,12 @@ All code produced by any agent must strictly comply with [docs/MODERN_PRACTICES.
 
 Agents share state asynchronously through documentation files, not bloated chat transcripts:
 
-1. **[docs/workflow/MILESTONES.md](./docs/workflow/MILESTONES.md):** The roadmap of major phases and challenges.
-2. **[docs/workflow/PROGRESS.md](./docs/workflow/PROGRESS.md):** The detailed task checklist and dependency sequence. Check this before writing code.
-3. **[docs/workflow/LOGS.md](./docs/workflow/LOGS.md):** Whenever you make an architectural decision or complete a milestone task, draft an entry here with file references (`file.ts#L10-L20`) and rationale.
-4. **[docs/GAPS.md](./docs/GAPS.md):** Learning ledger of concepts actively being mastered (Forms, Testing, Angular Optimization, Node Testing). **Mandatory:** Whenever a task touches these areas, pause and ask the developer to decide on the approach so they own the learning.
-5. **[docs/ENGINEERING_WITH_AI_GUIDE.md](./docs/ENGINEERING_WITH_AI_GUIDE.md):** The 6-step engineering framework to follow for every slice.
+1. **[docs/API_CONTRACTS.md](./docs/API_CONTRACTS.md):** The single source of truth for all network contracts, request/response DTOs, status codes, and concurrency invariants.
+2. **[docs/workflow/MILESTONES.md](./docs/workflow/MILESTONES.md):** The roadmap of major phases and challenges.
+3. **[docs/workflow/PROGRESS.md](./docs/workflow/PROGRESS.md):** The detailed task checklist and dependency sequence. Check this before writing code.
+4. **[docs/workflow/LOGS.md](./docs/workflow/LOGS.md):** Whenever you make an architectural decision or complete a milestone task, draft an entry here with file references (`file.ts#L10-L20`) and rationale.
+5. **[docs/GAPS.md](./docs/GAPS.md):** Learning ledger of concepts actively being mastered (Forms, Testing, Angular Optimization, Node Testing). **Mandatory:** Whenever a task touches these areas, pause and ask the developer to decide on the approach so they own the learning.
+6. **[docs/ENGINEERING_WITH_AI_GUIDE.md](./docs/ENGINEERING_WITH_AI_GUIDE.md):** The 6-step engineering framework to follow for every slice.
 
 ---
 

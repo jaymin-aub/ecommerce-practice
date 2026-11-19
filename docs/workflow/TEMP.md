@@ -78,3 +78,33 @@ git commit -m "chore(frontend): update package lockfile"
 git add .
 git commit -m "feat(backend): configure cors and extract product service layer"
 ```
+
+---
+
+## 7. Architectural Blind Spots & Open Question Marks
+
+Key architectural edge cases and design decisions to be aware of throughout development:
+
+1. **The "Ghost Reservation" Problem (Cart Abandonment):**
+   - *Risk:* Decrementing stock immediately on "Add to Cart" means a user who adds the last items and abandons the tab locks out other customers indefinitely.
+   - *Decision:* Simple hold for now; TTL-based stock release or reserve-at-checkout can be an advanced feature.
+
+2. **The Numeric `id` Race Condition (Signup Collision):**
+   - *Risk:* Computing `lastUser.id + 1` is vulnerable to duplicate key collisions under simultaneous registrations.
+   - *Decision:* Acceptable for seed/learning compatibility; in production, rely on MongoDB's native `_id: ObjectId` or atomic counters.
+
+3. **JWT Expiration & Mid-Shopping 401s:**
+   - *Risk:* Tokens expire in 2 hours. If a user acts after 2 hours, requests will fail with 401.
+   - *Decision:* Angular HTTP interceptor will catch 401, clear storage, redirect to login, and show an informative toast.
+
+4. **Real-Time Stock Updates Across Different Users:**
+   - *Risk:* User A buying the last item won't automatically turn User B's stock badge red without a page refresh or polling.
+   - *Decision:* Standard HTTP first; WebSocket (Socket.IO) broadcasting can be introduced as deliberate practice under `docs/GAPS.md`.
+
+5. **Multi-Tab State Synchronization:**
+   - *Risk:* Angular Signals are stored in single-tab browser memory. Adding an item in Tab 1 won't reflect in Tab 2 without storage event listeners.
+   - *Decision:* Standard single-tab memory model for initial milestone delivery.
+
+6. **The "Human Router" Context Drift Risk:**
+   - *Risk:* Worker Agent modifying interfaces locally in `backend/` without updating `shared/` causes split-brain drift.
+   - *Decision:* Golden rule: `shared/` is the single source of truth. Contract updates must be finalized in `shared/` first before code is written.

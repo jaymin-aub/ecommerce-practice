@@ -6,13 +6,6 @@
         "command": "./scripts/log-session.py",
         "timeout": 10
       }
-    ],
-    "Stop": [
-      {
-        "type": "command",
-        "command": "./scripts/log-session.py",
-        "timeout": 10
-      }
     ]
   }
 }
