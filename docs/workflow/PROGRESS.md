@@ -25,7 +25,7 @@ This document contains the step-by-step checklist and dependency path for each m
 
 ### 3. Detailed Task Checklist
 - [ ] `[Task-X.1]` **[Task Title]**
-  - **Owner / Target:** [Terminal 1 (Helper) / Terminal 2 (Worker) / Terminal 3 (Subhelper)]
+  - **Owner / Target:** [Terminal 1 (Helper) / Terminal 2 (Worker)]
   - **Target Files:** `path/to/file.ts`
   - **Inputs / Contracts:** [Refer to shared types or spec]
   - **Acceptance Criteria:** [Explicit definition of done]
@@ -34,7 +34,7 @@ This document contains the step-by-step checklist and dependency path for each m
 
 ### 4. Verification & Audit Gate
 - [ ] Code compiles cleanly (`npm run typecheck`).
-- [ ] Adversarial checks passed (Terminal 3 audit).
+- [ ] Adversarial checks and tests passed.
 - [ ] Human review completed line-by-line.
 - [ ] Decision logged in [LOGS.md](./LOGS.md) and committed to Git.
 ```

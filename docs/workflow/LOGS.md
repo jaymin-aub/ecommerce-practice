@@ -9,7 +9,7 @@ A structured ledger capturing every key architectural and implementation decisio
 ```markdown
 ### [YYYY-MM-DD] [Phase / Milestone Reference]: [Short Title of Decision / Change]
 
-- **Actor:** Human Router / Helper AI / Worker AI / Subhelper AI
+- **Actor:** Human Router / Helper AI / Worker AI
 - **Context & What Was Achieved:**
   [1-2 sentences on what milestone slice was completed immediately prior to this entry.]
 - **Decision:**
@@ -31,7 +31,7 @@ A structured ledger capturing every key architectural and implementation decisio
 - **Actor:** Human Router & AI Assistant
 - **Context & What Was Achieved:**
   - Initial repository structure explored: Angular 22 frontend, Express + Mongoose backend, docs, and shared directories.
-  - Formulated the human-in-the-loop 3-terminal architecture (Helper, Worker, Subhelper).
+  - Formulated the human-in-the-loop 2-terminal architecture (Helper, Worker).
   - Established initial roadmap templates in [MILESTONES.md](./MILESTONES.md), [PROGRESS.md](./PROGRESS.md), and [LOGS.md](./LOGS.md).
 - **Decision:**
   Adopt a strict Human-Router workflow over autonomous multi-agent swarms to maximize personal comprehension and guarantee code ownership throughout development.

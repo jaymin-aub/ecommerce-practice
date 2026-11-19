@@ -4,15 +4,14 @@ import json
 import os
 from datetime import datetime
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
+sessions_file = os.path.join(project_root, "docs", "workflow", "SESSIONS.md")
+plain_log = os.path.join(script_dir, "..", "sessions.log")
+
 def log_session(conv_id, agent_name="Helper Agent", reason="Session Exit"):
     if not conv_id:
         return
-    
-    # Locate project root (assuming script is in .agents/scripts/ or similar)
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.abspath(os.path.join(script_dir, "..", ".."))
-    sessions_file = os.path.join(project_root, "docs", "workflow", "SESSIONS.md")
-    plain_log = os.path.join(script_dir, "..", "sessions.log")
     
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     resume_cmd = f"agy --conversation {conv_id}"
@@ -79,6 +78,20 @@ def main():
     hook_event = data.get("hookEventName") or ""
     
     agent_name = "Helper Agent"
+    if conv_id and os.path.exists(sessions_file):
+        try:
+            with open(sessions_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    if conv_id in line and "|" in line:
+                        parts = [p.strip() for p in line.split("|")]
+                        if len(parts) >= 3 and parts[1]:
+                            name = parts[1].replace("*", "").strip()
+                            if name:
+                                agent_name = name
+                                break
+        except Exception:
+            pass
+
     is_exit_cmd = last_user_input.startswith(("/exit", "exit", "/quit", "quit", ":q"))
     
     if is_exit_cmd or hook_event == "Stop":

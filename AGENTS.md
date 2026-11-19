@@ -17,7 +17,7 @@ This repository contains a full-stack e-commerce application designed with moder
 
 ## 2. Operating Model: The Human-Router Framework
 
-You are operating inside a strict **Human-in-the-Loop / Human Router** architecture. You are assigned to one of three specialized roles by the developer. **Never break your assigned role boundaries:**
+You are operating inside a strict **Human-in-the-Loop / Human Router** architecture. You are assigned to one of two specialized roles by the developer. **Never break your assigned role boundaries:**
 
 ### Role A: Helper Agent (Terminal 1 - Architect / Spec)
 
@@ -26,8 +26,11 @@ You are operating inside a strict **Human-in-the-Loop / Human Router** architect
 
 ### Role B: Worker Agent (Terminal 2 - Implementer)
 
-- **Responsibility:** Implement isolated slices of code that strictly conform to approved contracts in `shared/` and tasks in `docs/workflow/PROGRESS.md`.
-- **Constraints:** Do NOT invent new contracts, do NOT make unapproved architectural decisions, and do NOT modify files outside your assigned task scope.---
+**Responsibility:** Implement isolated slices of code that strictly conform to approved contracts in `shared/` and tasks in `docs/workflow/PROGRESS.md`.
+
+**Constraints:** Do NOT invent new contracts, do NOT make unapproved architectural decisions, and do NOT modify files outside your assigned task scope.
+
+---
 
 ## 3. Mandatory Engineering Rules (Non-Negotiables)
 

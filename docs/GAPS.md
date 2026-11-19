@@ -9,7 +9,7 @@ This document tracks technical areas and concepts that are actively being learne
 > **Engineer Persona:**  
 > The developer is operating as a **junior-to-mid software engineer** who intentionally wants to build deep mastery, understand the mechanics of every single layer, and **own up to every decision** made in this repository.
 
-### Mandatory Directive for All AI Agents (Helper, Worker, Subhelper):
+### Mandatory Directive for All AI Agents (Helper, Worker):
 - **Never auto-generate black-box solutions** for items listed in this document.
 - **Always ask and consult the developer** whenever a task touches any topic listed below before choosing or writing code:
   - Ask: *"This feature touches [Topic from GAPS.md]. Would you like to implement this using [Approach A] or [Approach B], and shall we walk through how it works?"*
