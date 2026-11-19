@@ -11,7 +11,7 @@ export type Company = {
   title: string;
 };
 
-export type UserType = {
+export type UserModelType = {
   id: number;
   firstName: string;
   lastName: string;

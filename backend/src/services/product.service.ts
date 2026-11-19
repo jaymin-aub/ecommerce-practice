@@ -1,14 +1,14 @@
+import type { PaginationMeta, ProductDto } from "@shared";
 import Product from "../models/product.model.ts";
-import type { ProductType } from "../types/product.type.ts";
 import { NotFoundError } from "../utils/errors.ts";
-import type { PaginationMeta, PaginationParams } from "../utils/pagination.ts";
+import type { PaginationParams } from "../utils/pagination.ts";
 import {
   buildPaginationMeta,
   parsePagination,
 } from "../utils/pagination.ts";
 
 export interface PaginatedProducts {
-  readonly products: readonly ProductType[];
+  readonly products: readonly ProductDto[];
   readonly pagination: PaginationMeta;
 }
 
@@ -17,7 +17,7 @@ export class ProductService {
     params: PaginationParams = parsePagination({}),
   ): Promise<PaginatedProducts> {
     const [products, total] = await Promise.all([
-      Product.find().skip(params.skip).limit(params.limit).lean<ProductType[]>(),
+      Product.find().skip(params.skip).limit(params.limit).lean<ProductDto[]>(),
       Product.countDocuments(),
     ]);
 
@@ -27,8 +27,8 @@ export class ProductService {
     };
   }
 
-  async getProductById(id: number): Promise<ProductType> {
-    const product = await Product.findOne({ id }).lean<ProductType>();
+  async getProductById(id: number): Promise<ProductDto> {
+    const product = await Product.findOne({ id }).lean<ProductDto>();
 
     if (!product) {
       throw new NotFoundError("Product not found");
@@ -37,16 +37,16 @@ export class ProductService {
     return product;
   }
 
-  async createProduct(productData: Partial<ProductType>): Promise<ProductType> {
+  async createProduct(productData: Partial<ProductDto>): Promise<ProductDto> {
     const product = new Product(productData);
     await product.save();
-    return product.toObject() as ProductType;
+    return product.toObject() as unknown as ProductDto;
   }
 
   async replaceProduct(
     id: number,
-    productData: Partial<ProductType>,
-  ): Promise<ProductType> {
+    productData: Partial<ProductDto>,
+  ): Promise<ProductDto> {
     const product = await Product.findOneAndReplace(
       { id },
       { ...productData, id },
@@ -54,7 +54,7 @@ export class ProductService {
         new: true,
         runValidators: true,
       },
-    ).lean<ProductType>();
+    ).lean<ProductDto>();
 
     if (!product) {
       throw new NotFoundError("Product not found");
@@ -65,8 +65,8 @@ export class ProductService {
 
   async updateProduct(
     id: number,
-    updateData: Partial<ProductType>,
-  ): Promise<ProductType> {
+    updateData: Partial<ProductDto>,
+  ): Promise<ProductDto> {
     const product = await Product.findOneAndUpdate(
       { id },
       { $set: updateData },
@@ -74,7 +74,7 @@ export class ProductService {
         new: true,
         runValidators: true,
       },
-    ).lean<ProductType>();
+    ).lean<ProductDto>();
 
     if (!product) {
       throw new NotFoundError("Product not found");
@@ -83,10 +83,10 @@ export class ProductService {
     return product;
   }
 
-  async deleteProduct(id: number): Promise<ProductType> {
+  async deleteProduct(id: number): Promise<ProductDto> {
     const deletedProduct = await Product.findOneAndDelete({
       id,
-    }).lean<ProductType>();
+    }).lean<ProductDto>();
 
     if (!deletedProduct) {
       throw new NotFoundError("Product not found");

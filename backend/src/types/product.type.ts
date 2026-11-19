@@ -1,9 +1,9 @@
-export type ProductType = {
+export type ProductModelType = {
   id: number;
   title: string;
   description: string;
   price: number;
-  discountPercentage: number;
+  discountPercentage?: number;
   rating: number;
   stock: number;
   brand: string;

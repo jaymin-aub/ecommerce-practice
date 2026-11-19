@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
-import type { ProductType } from "../types/product.type.ts";
+import type { ProductModelType } from "../types/product.type.ts";
 
-const productSchema = new Schema<ProductType>({
+const productSchema = new Schema<ProductModelType>({
   id: {
     type: Number,
     required: true,
@@ -48,5 +48,5 @@ const productSchema = new Schema<ProductType>({
   },
 });
 
-const Product = mongoose.model<ProductType>("Product", productSchema);
+const Product = mongoose.model<ProductModelType>("Product", productSchema);
 export default Product;

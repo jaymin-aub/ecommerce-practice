@@ -1,14 +1,11 @@
+import type { PaginationMeta } from "@shared";
+
+export type { PaginationMeta };
+
 export interface PaginationParams {
   readonly page: number;
   readonly limit: number;
   readonly skip: number;
-}
-
-export interface PaginationMeta {
-  readonly total: number;
-  readonly page: number;
-  readonly limit: number;
-  readonly totalPages: number;
 }
 
 export interface PaginatedData<T> {

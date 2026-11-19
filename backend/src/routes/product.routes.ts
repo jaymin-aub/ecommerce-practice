@@ -11,13 +11,12 @@ import {
 
 export const productRouter = express.Router();
 
-// Protect all product routes
-productRouter.use(authMiddleware);
+// Public routes (catalog browsing)
+productRouter.get("/", listProducts);
+productRouter.get("/:id", getProduct);
 
-productRouter
-  .get("/", listProducts)
-  .post("/", createProduct)
-  .get("/:id", getProduct)
-  .put("/:id", replaceProduct)
-  .patch("/:id", patchProduct)
-  .delete("/:id", deleteProduct);
+// Protected routes (mutating operations)
+productRouter.post("/", authMiddleware, createProduct);
+productRouter.put("/:id", authMiddleware, replaceProduct);
+productRouter.patch("/:id", authMiddleware, patchProduct);
+productRouter.delete("/:id", authMiddleware, deleteProduct);

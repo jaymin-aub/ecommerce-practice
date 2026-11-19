@@ -1,28 +1,15 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import type { HydratedDocument } from "mongoose";
+import type {
+  AuthResponseDto,
+  LoginDto,
+  SignupDto,
+  UserResponseDto,
+} from "@shared";
 import User from "../models/user.model.ts";
-import type { UserType } from "../types/user.type.ts";
+import type { UserModelType } from "../types/user.type.ts";
 import { BadRequestError, UnauthorizedError } from "../utils/errors.ts";
-
-export type SanitizedUser = Omit<UserType, "password">;
-
-export interface AuthResult {
-  readonly token: string;
-  readonly user: SanitizedUser;
-}
-
-export interface SignupDto extends Partial<UserType> {
-  readonly email: string;
-  readonly password: string;
-  readonly username?: string;
-}
-
-export interface LoginDto {
-  readonly email?: string;
-  readonly username?: string;
-  readonly password: string;
-}
 
 export class AuthService {
   private readonly saltRounds = 10;
@@ -41,20 +28,22 @@ export class AuthService {
     return jwt.sign(payload, secretKey, { expiresIn: this.tokenExpiration });
   }
 
-  private sanitizeUser(userDoc: HydratedDocument<UserType>): SanitizedUser {
+  private sanitizeUser(
+    userDoc: HydratedDocument<UserModelType>,
+  ): UserResponseDto {
     const userData = userDoc.toObject();
     delete (userData as { password?: string }).password;
-    return userData as SanitizedUser;
+    return userData as unknown as UserResponseDto;
   }
 
-  async signUp(dto: SignupDto): Promise<AuthResult> {
+  async signUp(dto: SignupDto): Promise<AuthResponseDto> {
     const email = dto.email.trim().toLowerCase();
     const username = dto.username?.trim();
 
     // Check if user already exists
     const existingUser = await User.findOne({
       $or: [{ email }, ...(username ? [{ username }] : [])],
-    }).lean<UserType>();
+    }).lean<UserModelType>();
 
     if (existingUser) {
       const isEmailTaken = existingUser.email === email;
@@ -67,7 +56,7 @@ export class AuthService {
     const hashedPassword = await bcrypt.hash(dto.password, this.saltRounds);
 
     // Auto-generate numeric ID if not provided (required by schema)
-    let userId = dto.id;
+    let userId = (dto as { id?: number }).id;
     if (!userId) {
       const lastUser = await User.findOne()
         .sort({ id: -1 })
@@ -98,7 +87,7 @@ export class AuthService {
     };
   }
 
-  async login(credentials: LoginDto): Promise<AuthResult> {
+  async login(credentials: LoginDto): Promise<AuthResponseDto> {
     const identifier = credentials.email || credentials.username;
     if (!identifier) {
       throw new BadRequestError("Email or username is required");

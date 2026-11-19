@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import type { Address, Company, UserType } from "../types/user.type.ts";
+import type { Address, Company, UserModelType } from "../types/user.type.ts";
 
 const addressSchema = new Schema<Address>(
   {
@@ -41,7 +41,7 @@ const companySchema = new Schema<Company>(
   { _id: false },
 );
 
-const userSchema = new Schema<UserType>({
+const userSchema = new Schema<UserModelType>({
   id: {
     type: Number,
     required: true,
@@ -101,5 +101,5 @@ const userSchema = new Schema<UserType>({
   token: String,
 });
 
-const User = mongoose.model<UserType>("User", userSchema);
+const User = mongoose.model<UserModelType>("User", userSchema);
 export default User;
